@@ -11,14 +11,8 @@
 
 @interface ViewController () <AVAudioPlayerDelegate>
 
-//@property (strong, nonatomic) AVAudioSession *audioSession;
-//@property (strong, nonatomic) AVAudioPlayer *backgroundMusicPlayer;
-//@property (assign) BOOL backgroundMusicPlaying;
-//@property (assign) BOOL backgroundMusicInterrupted;
-
 @property (assign) SystemSoundID bringOutYourDeadSound;
 @property (assign) SystemSoundID soundSound;
-
 
 @end
 
