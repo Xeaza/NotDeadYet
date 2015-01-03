@@ -17,6 +17,8 @@
 //@property (assign) BOOL backgroundMusicInterrupted;
 
 @property (assign) SystemSoundID bringOutYourDeadSound;
+@property (assign) SystemSoundID soundSound;
+
 
 @end
 
@@ -29,8 +31,7 @@
 
 - (IBAction)onBringOutYourDeadButtonPressed:(id)sender
 {
-    NSString *bringOutYourDeadPath = [[NSBundle mainBundle]
-                            pathForResource:@"dead" ofType:@"wav"];
+    NSString *bringOutYourDeadPath = [[NSBundle mainBundle] pathForResource:@"dead" ofType:@"wav"];
     NSURL *bringOutYourDeadURL = [NSURL fileURLWithPath:bringOutYourDeadPath];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)bringOutYourDeadURL, &_bringOutYourDeadSound);
     AudioServicesPlaySystemSound(self.bringOutYourDeadSound);
@@ -38,7 +39,13 @@
 
 - (IBAction)onNotDeadYetButtonPressed:(id)sender
 {
-    
+    NSArray *soundsArray = @[@"notDead", @"happy"];
+    NSString *randomName = soundsArray[arc4random_uniform(0)+1];
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:randomName ofType:@"wav"];
+
+    NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &_soundSound);
+    AudioServicesPlaySystemSound(self.soundSound);
 }
 
 - (void)didReceiveMemoryWarning {
