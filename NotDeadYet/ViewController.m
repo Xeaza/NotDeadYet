@@ -13,6 +13,8 @@
 
 @property (assign) SystemSoundID bringOutYourDeadSound;
 @property (assign) SystemSoundID soundSound;
+@property (weak, nonatomic) IBOutlet UIButton *deadButton;
+@property (weak, nonatomic) IBOutlet UIButton *notDeadButton;
 
 @end
 
@@ -20,10 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    UIImage *selectedButtonBackgroundImage = [UIImage imageNamed:@"buttonPressed"];
+
+    [self.deadButton setBackgroundImage:selectedButtonBackgroundImage forState: UIControlStateHighlighted];
+    [self.notDeadButton setBackgroundImage:selectedButtonBackgroundImage forState: UIControlStateHighlighted];
 }
 
-- (IBAction)onBringOutYourDeadButtonPressed:(id)sender
+- (IBAction)onBringOutYourDeadButtonPressed:(UIButton *)button
 {
     NSString *bringOutYourDeadPath = [[NSBundle mainBundle] pathForResource:@"dead" ofType:@"wav"];
     NSURL *bringOutYourDeadURL = [NSURL fileURLWithPath:bringOutYourDeadPath];
@@ -31,7 +36,7 @@
     AudioServicesPlaySystemSound(self.bringOutYourDeadSound);
 }
 
-- (IBAction)onNotDeadYetButtonPressed:(id)sender
+- (IBAction)onNotDeadYetButtonPressed:(UIButton *)button
 {
     NSArray *soundsArray = @[@"notDead", @"happy"];
     NSString *randomName = soundsArray[arc4random_uniform(0)+1];
