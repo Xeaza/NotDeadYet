@@ -14,6 +14,9 @@
 		3432DF091A57ACB500D00B4D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3432DF081A57ACB500D00B4D /* Images.xcassets */; };
 		3432DF0C1A57ACB500D00B4D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3432DF0A1A57ACB500D00B4D /* LaunchScreen.xib */; };
 		3432DF181A57ACB500D00B4D /* NotDeadYetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3432DF171A57ACB500D00B4D /* NotDeadYetTests.m */; };
+		3432DF241A57B0C600D00B4D /* dead.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3432DF211A57B0C600D00B4D /* dead.wav */; };
+		3432DF251A57B0C600D00B4D /* happy.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3432DF221A57B0C600D00B4D /* happy.wav */; };
+		3432DF261A57B0C600D00B4D /* notdead.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3432DF231A57B0C600D00B4D /* notdead.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		3432DF111A57ACB500D00B4D /* NotDeadYetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotDeadYetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3432DF161A57ACB500D00B4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3432DF171A57ACB500D00B4D /* NotDeadYetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotDeadYetTests.m; sourceTree = "<group>"; };
+		3432DF211A57B0C600D00B4D /* dead.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dead.wav; sourceTree = "<group>"; };
+		3432DF221A57B0C600D00B4D /* happy.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = happy.wav; sourceTree = "<group>"; };
+		3432DF231A57B0C600D00B4D /* notdead.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = notdead.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 				3432DF001A57ACB500D00B4D /* AppDelegate.m */,
 				3432DF021A57ACB500D00B4D /* ViewController.h */,
 				3432DF031A57ACB500D00B4D /* ViewController.m */,
+				3432DF271A57B0D700D00B4D /* Sounds */,
 				3432DF051A57ACB500D00B4D /* Main.storyboard */,
 				3432DF081A57ACB500D00B4D /* Images.xcassets */,
 				3432DF0A1A57ACB500D00B4D /* LaunchScreen.xib */,
@@ -117,6 +124,16 @@
 				3432DF161A57ACB500D00B4D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3432DF271A57B0D700D00B4D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				3432DF211A57B0C600D00B4D /* dead.wav */,
+				3432DF221A57B0C600D00B4D /* happy.wav */,
+				3432DF231A57B0C600D00B4D /* notdead.wav */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +216,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3432DF261A57B0C600D00B4D /* notdead.wav in Resources */,
 				3432DF071A57ACB500D00B4D /* Main.storyboard in Resources */,
 				3432DF0C1A57ACB500D00B4D /* LaunchScreen.xib in Resources */,
+				3432DF241A57B0C600D00B4D /* dead.wav in Resources */,
 				3432DF091A57ACB500D00B4D /* Images.xcassets in Resources */,
+				3432DF251A57B0C600D00B4D /* happy.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
