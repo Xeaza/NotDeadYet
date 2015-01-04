@@ -2,8 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,77 +16,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drE-wC-Sfm">
-                                <rect key="frame" x="179" y="315" width="243" height="243"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6w7-Yf-Ffx">
+                                <rect key="frame" x="150" y="50" width="300" height="500"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drE-wC-Sfm">
+                                        <rect key="frame" x="29" y="257" width="243" height="243"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="243" id="GL9-r9-Hyo"/>
+                                            <constraint firstAttribute="height" constant="243" id="Wg2-Ul-OBX"/>
+                                        </constraints>
+                                        <state key="normal" title="I'M NOT DEAD" backgroundImage="button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onNotDeadYetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iau-Rp-Kwh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="04f-fV-fg7">
+                                        <rect key="frame" x="27" y="2" width="247" height="247"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="247" id="0rS-fa-Leq"/>
+                                            <constraint firstAttribute="height" constant="247" id="PRm-kU-OF5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="18"/>
+                                        <state key="normal" title="BRING OUT YOUR DEAD!" backgroundImage="button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onBringOutYourDeadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cT-Sn-ahv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="drE-wC-Sfm" secondAttribute="height" multiplier="1:1" id="dXF-C6-9OJ"/>
-                                    <constraint firstAttribute="width" constant="243" id="wMu-Z9-ZD2"/>
+                                    <constraint firstAttribute="centerX" secondItem="04f-fV-fg7" secondAttribute="centerX" id="Bi4-gN-p1F"/>
+                                    <constraint firstAttribute="width" constant="300" id="Emw-SY-3uo"/>
+                                    <constraint firstItem="drE-wC-Sfm" firstAttribute="top" secondItem="04f-fV-fg7" secondAttribute="bottom" constant="8" id="OkA-vh-ko7"/>
+                                    <constraint firstAttribute="height" constant="500" id="PzI-lR-laF"/>
+                                    <constraint firstAttribute="centerX" secondItem="drE-wC-Sfm" secondAttribute="centerX" id="aZH-Ta-0CU"/>
+                                    <constraint firstItem="04f-fV-fg7" firstAttribute="top" secondItem="6w7-Yf-Ffx" secondAttribute="top" constant="2" id="kZu-e7-UTH"/>
                                 </constraints>
-                                <state key="normal" title="I'M NOT DEAD" backgroundImage="button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onNotDeadYetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iau-Rp-Kwh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="04f-fV-fg7">
-                                <rect key="frame" x="177" y="51" width="247" height="247"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="247" id="dIz-9r-kQ6"/>
-                                    <constraint firstAttribute="width" secondItem="04f-fV-fg7" secondAttribute="height" multiplier="1:1" id="l6A-us-O9v"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="18"/>
-                                <state key="normal" title="BRING OUT YOUR DEAD!" backgroundImage="button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onBringOutYourDeadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cT-Sn-ahv"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.98431372549019602" green="0.87058823529411766" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="04f-fV-fg7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="132" id="1BI-l8-WDi">
-                                <variation key="heightClass=compact-widthClass=regular" constant="114"/>
-                            </constraint>
-                            <constraint firstAttribute="centerX" secondItem="04f-fV-fg7" secondAttribute="centerX" id="BeW-S5-u12"/>
-                            <constraint firstItem="drE-wC-Sfm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="158" id="KS3-NN-2zm">
-                                <variation key="heightClass=compact-widthClass=regular" constant="60"/>
-                            </constraint>
-                            <constraint firstAttribute="centerX" secondItem="drE-wC-Sfm" secondAttribute="centerX" id="QXb-uz-fTO"/>
-                            <constraint firstItem="drE-wC-Sfm" firstAttribute="top" secondItem="04f-fV-fg7" secondAttribute="bottom" constant="17" id="Xsz-Fe-k9W"/>
-                            <constraint firstItem="drE-wC-Sfm" firstAttribute="leading" secondItem="04f-fV-fg7" secondAttribute="trailing" constant="55" id="cLO-3u-raD">
-                                <variation key="heightClass=compact-widthClass=regular" constant="45"/>
-                            </constraint>
-                            <constraint firstItem="04f-fV-fg7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="156" id="g8l-Zb-hgO">
-                                <variation key="heightClass=compact-widthClass=regular" constant="56"/>
-                            </constraint>
-                            <constraint firstItem="04f-fV-fg7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="hux-3l-yNz"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="drE-wC-Sfm" secondAttribute="bottom" constant="15" id="xm0-zs-3i8"/>
+                            <constraint firstAttribute="centerY" secondItem="6w7-Yf-Ffx" secondAttribute="centerY" id="ab3-RT-hK4"/>
+                            <constraint firstAttribute="centerX" secondItem="6w7-Yf-Ffx" secondAttribute="centerX" id="eSE-bw-wLy"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="1BI-l8-WDi"/>
-                                <exclude reference="g8l-Zb-hgO"/>
-                                <exclude reference="KS3-NN-2zm"/>
-                                <exclude reference="cLO-3u-raD"/>
-                                <exclude reference="xm0-zs-3i8"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=regular">
-                            <mask key="constraints">
-                                <include reference="1BI-l8-WDi"/>
-                                <exclude reference="BeW-S5-u12"/>
-                                <include reference="g8l-Zb-hgO"/>
-                                <exclude reference="hux-3l-yNz"/>
-                                <include reference="KS3-NN-2zm"/>
-                                <exclude reference="QXb-uz-fTO"/>
-                                <exclude reference="Xsz-Fe-k9W"/>
-                                <include reference="cLO-3u-raD"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="deadButton" destination="04f-fV-fg7" id="vAk-L3-6yn"/>
