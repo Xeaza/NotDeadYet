@@ -15,6 +15,7 @@
 @property (assign) SystemSoundID soundSound;
 @property (weak, nonatomic) IBOutlet UIButton *deadButton;
 @property (weak, nonatomic) IBOutlet UIButton *notDeadButton;
+@property NSInteger counter;
 
 @end
 
@@ -22,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.counter = 0;
     UIImage *selectedButtonBackgroundImage = [UIImage imageNamed:@"buttonPressed"];
 
     [self.deadButton setBackgroundImage:selectedButtonBackgroundImage forState: UIControlStateHighlighted];
@@ -38,8 +40,18 @@
 
 - (IBAction)onNotDeadYetButtonPressed:(UIButton *)button
 {
-    NSArray *soundsArray = @[@"notDead", @"happy"];
-    NSString *randomName = soundsArray[arc4random_uniform(0)+1];
+    NSArray *soundsArray = @[@"notdead", @"happy"];
+
+    NSString *randomName;
+    randomName = soundsArray[self.counter];
+
+    if (self.counter == 0) {
+        self.counter = 1;
+    }
+    else {
+        self.counter = 0;
+    }
+
     NSString *soundPath = [[NSBundle mainBundle] pathForResource:randomName ofType:@"wav"];
 
     NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
