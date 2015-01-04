@@ -17,6 +17,8 @@
 		3432DF241A57B0C600D00B4D /* dead.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3432DF211A57B0C600D00B4D /* dead.wav */; };
 		3432DF251A57B0C600D00B4D /* happy.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3432DF221A57B0C600D00B4D /* happy.wav */; };
 		3432DF261A57B0C600D00B4D /* notdead.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3432DF231A57B0C600D00B4D /* notdead.wav */; };
+		34E26DF61A58DD42002679A3 /* shrub.wav in Resources */ = {isa = PBXBuildFile; fileRef = 34E26DF41A58DD42002679A3 /* shrub.wav */; };
+		34E26DF71A58DD42002679A3 /* shrub2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 34E26DF51A58DD42002679A3 /* shrub2.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		3432DF211A57B0C600D00B4D /* dead.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dead.wav; sourceTree = "<group>"; };
 		3432DF221A57B0C600D00B4D /* happy.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = happy.wav; sourceTree = "<group>"; };
 		3432DF231A57B0C600D00B4D /* notdead.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = notdead.wav; sourceTree = "<group>"; };
+		34E26DF41A58DD42002679A3 /* shrub.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = shrub.wav; path = sounds/shrub.wav; sourceTree = SOURCE_ROOT; };
+		34E26DF51A58DD42002679A3 /* shrub2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = shrub2.wav; path = sounds/shrub2.wav; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 		3432DF271A57B0D700D00B4D /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				34E26DF41A58DD42002679A3 /* shrub.wav */,
+				34E26DF51A58DD42002679A3 /* shrub2.wav */,
 				3432DF211A57B0C600D00B4D /* dead.wav */,
 				3432DF221A57B0C600D00B4D /* happy.wav */,
 				3432DF231A57B0C600D00B4D /* notdead.wav */,
@@ -216,9 +222,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E26DF61A58DD42002679A3 /* shrub.wav in Resources */,
 				3432DF261A57B0C600D00B4D /* notdead.wav in Resources */,
 				3432DF071A57ACB500D00B4D /* Main.storyboard in Resources */,
 				3432DF0C1A57ACB500D00B4D /* LaunchScreen.xib in Resources */,
+				34E26DF71A58DD42002679A3 /* shrub2.wav in Resources */,
 				3432DF241A57B0C600D00B4D /* dead.wav in Resources */,
 				3432DF091A57ACB500D00B4D /* Images.xcassets in Resources */,
 				3432DF251A57B0C600D00B4D /* happy.wav in Resources */,
@@ -434,6 +442,7 @@
 				3432DF1D1A57ACB500D00B4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3432DF1E1A57ACB500D00B4D /* Build configuration list for PBXNativeTarget "NotDeadYetTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +451,7 @@
 				3432DF201A57ACB500D00B4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
