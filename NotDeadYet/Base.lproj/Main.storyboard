@@ -19,51 +19,151 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6w7-Yf-Ffx">
                                 <rect key="frame" x="150" y="50" width="300" height="500"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drE-wC-Sfm">
-                                        <rect key="frame" x="29" y="257" width="243" height="243"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="243" id="GL9-r9-Hyo"/>
-                                            <constraint firstAttribute="height" constant="243" id="Wg2-Ul-OBX"/>
-                                        </constraints>
-                                        <state key="normal" title="I'M NOT DEAD" backgroundImage="button">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onNotDeadYetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iau-Rp-Kwh"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="04f-fV-fg7">
                                         <rect key="frame" x="27" y="2" width="247" height="247"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="247" id="0rS-fa-Leq"/>
-                                            <constraint firstAttribute="height" constant="247" id="PRm-kU-OF5"/>
+                                            <constraint firstAttribute="width" constant="247" id="0rS-fa-Leq">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="330"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="247" id="Ocg-OQ-cEx"/>
+                                            <constraint firstAttribute="height" constant="247" id="PRm-kU-OF5">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="330"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="247" id="SoG-Xq-rq0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="18"/>
                                         <state key="normal" title="BRING OUT YOUR DEAD!" backgroundImage="button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Ocg-OQ-cEx"/>
+                                                <exclude reference="SoG-Xq-rq0"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="0rS-fa-Leq"/>
+                                                <include reference="Ocg-OQ-cEx"/>
+                                                <exclude reference="PRm-kU-OF5"/>
+                                                <include reference="SoG-Xq-rq0"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="onBringOutYourDeadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cT-Sn-ahv"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drE-wC-Sfm">
+                                        <rect key="frame" x="29" y="257" width="243" height="243"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="243" id="GL9-r9-Hyo">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="330"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="243" id="Lxx-SL-HLJ"/>
+                                            <constraint firstAttribute="height" constant="243" id="Wg2-Ul-OBX">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="330"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="243" id="azv-G3-o2t"/>
+                                        </constraints>
+                                        <state key="normal" title="I'M NOT DEAD" backgroundImage="button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Lxx-SL-HLJ"/>
+                                                <exclude reference="azv-G3-o2t"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="GL9-r9-Hyo"/>
+                                                <include reference="Lxx-SL-HLJ"/>
+                                                <exclude reference="Wg2-Ul-OBX"/>
+                                                <include reference="azv-G3-o2t"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onNotDeadYetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iau-Rp-Kwh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="04f-fV-fg7" secondAttribute="centerX" id="Bi4-gN-p1F"/>
-                                    <constraint firstAttribute="width" constant="300" id="Emw-SY-3uo"/>
-                                    <constraint firstItem="drE-wC-Sfm" firstAttribute="top" secondItem="04f-fV-fg7" secondAttribute="bottom" constant="8" id="OkA-vh-ko7"/>
-                                    <constraint firstAttribute="height" constant="500" id="PzI-lR-laF"/>
+                                    <constraint firstAttribute="centerX" secondItem="04f-fV-fg7" secondAttribute="centerX" id="Bi4-gN-p1F">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="-6"/>
+                                    </constraint>
+                                    <constraint firstItem="04f-fV-fg7" firstAttribute="top" secondItem="6w7-Yf-Ffx" secondAttribute="top" constant="25" id="Dgr-hp-20l"/>
+                                    <constraint firstAttribute="width" constant="300" id="Emw-SY-3uo">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="576"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="298" id="Lg7-3N-DXt"/>
+                                    <constraint firstItem="drE-wC-Sfm" firstAttribute="top" secondItem="04f-fV-fg7" secondAttribute="bottom" constant="8" id="OkA-vh-ko7">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="5"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="500" id="PzI-lR-laF">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="675"/>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="drE-wC-Sfm" secondAttribute="trailing" constant="20" id="SLO-ut-mtT"/>
+                                    <constraint firstAttribute="width" constant="557" id="Y3s-pI-cPa"/>
+                                    <constraint firstItem="drE-wC-Sfm" firstAttribute="top" secondItem="6w7-Yf-Ffx" secondAttribute="top" constant="27" id="YeV-Bg-4ar"/>
                                     <constraint firstAttribute="centerX" secondItem="drE-wC-Sfm" secondAttribute="centerX" id="aZH-Ta-0CU"/>
-                                    <constraint firstItem="04f-fV-fg7" firstAttribute="top" secondItem="6w7-Yf-Ffx" secondAttribute="top" constant="2" id="kZu-e7-UTH"/>
+                                    <constraint firstItem="04f-fV-fg7" firstAttribute="top" secondItem="6w7-Yf-Ffx" secondAttribute="top" constant="2" id="kZu-e7-UTH">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="1"/>
+                                    </constraint>
+                                    <constraint firstItem="04f-fV-fg7" firstAttribute="leading" secondItem="6w7-Yf-Ffx" secondAttribute="leading" constant="20" id="ydm-a7-bng"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Lg7-3N-DXt"/>
+                                        <exclude reference="Y3s-pI-cPa"/>
+                                        <exclude reference="Dgr-hp-20l"/>
+                                        <exclude reference="ydm-a7-bng"/>
+                                        <exclude reference="SLO-ut-mtT"/>
+                                        <exclude reference="YeV-Bg-4ar"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="Emw-SY-3uo"/>
+                                        <include reference="Lg7-3N-DXt"/>
+                                        <exclude reference="PzI-lR-laF"/>
+                                        <include reference="Y3s-pI-cPa"/>
+                                        <exclude reference="Bi4-gN-p1F"/>
+                                        <include reference="Dgr-hp-20l"/>
+                                        <exclude reference="kZu-e7-UTH"/>
+                                        <include reference="ydm-a7-bng"/>
+                                        <exclude reference="OkA-vh-ko7"/>
+                                        <include reference="SLO-ut-mtT"/>
+                                        <include reference="YeV-Bg-4ar"/>
+                                        <exclude reference="aZH-Ta-0CU"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.98431372549019602" green="0.87058823529411766" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="6w7-Yf-Ffx" secondAttribute="centerY" id="ab3-RT-hK4"/>
+                            <constraint firstAttribute="centerY" secondItem="6w7-Yf-Ffx" secondAttribute="centerY" id="5kB-tU-zew"/>
+                            <constraint firstAttribute="centerX" secondItem="6w7-Yf-Ffx" secondAttribute="centerX" id="RLg-an-Tsw"/>
+                            <constraint firstAttribute="centerY" secondItem="6w7-Yf-Ffx" secondAttribute="centerY" id="ab3-RT-hK4">
+                                <variation key="heightClass=regular-widthClass=regular" constant="-12.5"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="6w7-Yf-Ffx" secondAttribute="centerX" id="eSE-bw-wLy"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5kB-tU-zew"/>
+                                <exclude reference="RLg-an-Tsw"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="5kB-tU-zew"/>
+                                <include reference="RLg-an-Tsw"/>
+                                <exclude reference="ab3-RT-hK4"/>
+                                <exclude reference="eSE-bw-wLy"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="deadButton" destination="04f-fV-fg7" id="vAk-L3-6yn"/>
@@ -72,6 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.75" y="178.5"/>
         </scene>
     </scenes>
     <resources>
